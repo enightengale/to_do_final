@@ -4,6 +4,8 @@
 
 body {
   margin: 0px;
+  width: 100%;
+  height: 100%;
 }
 
 .container {
@@ -40,5 +42,35 @@ body {
 }
 
 .create-btn:hover {
+  color: snow;
+}
+
+.position {
+  margin: auto;
+}
+
+input {
+  font-size: 15px;
+  outline: none;
+  padding: 5px;
+  border-radius: 2px;
+  border: 1px solid black;
+}
+
+label {
+  color: burlywood;
+  font-size: 20px;
+}
+
+button {
+  background-color: burlywood;
+  padding: 5px;
+  margin-left: 5px;
+  font-size: 15px;
+  border-radius: 2px;
+  border: none;
+}
+
+button:hover {
   color: snow;
 }
