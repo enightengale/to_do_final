@@ -5,7 +5,7 @@ class CreateLists < ActiveRecord::Migration[5.2]
 
       table.timestamps
     end
-    # a column for which list a task belongs to 
+    # a column for which list a task belongs to
     add_column(:tasks, :list_id, :integer)
   end
 end

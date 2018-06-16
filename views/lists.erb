@@ -1,0 +1,9 @@
+<div class="container bg1">
+  <div class="col-lg">
+    <h2>Your Lists</h2>
+  </div>
+</div>
+
+<% @lists.each() do |list| %>
+<p><%= list.name() %></p>
+<% end %>
