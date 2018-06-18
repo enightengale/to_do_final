@@ -88,3 +88,13 @@ a {
 a:hover {
   color: black;
 }
+
+@media only screen and (max-width: 728px) {
+  .container:nth-of-type(2) {
+    display: block;
+  }
+
+  .col-sm {
+    width: 100%;
+  }
+}
