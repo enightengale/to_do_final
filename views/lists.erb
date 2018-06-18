@@ -5,5 +5,5 @@
 </div>
 
 <% @lists.each() do |list| %>
-<h3 class="center"><a href="#"><%= list.name() %></a></h3>
+<h3 class="center"><a href="list/<%= list.id() %>"><%= list.name() %></a></h3>
 <% end %>
