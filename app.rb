@@ -25,3 +25,9 @@ get("/lists") do
   @lists = List.all()
   erb(:lists)
 end
+
+get("/list/:id") do
+  @list = List.find(params.fetch("id").to_i())
+  @lists = List.all()
+  erb(:list)
+end
