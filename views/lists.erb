@@ -4,6 +4,25 @@
   </div>
 </div>
 
+<p>Add a Task</p>
+
+<form action="/lists" method="post">
+  <div class="form-group">
+    <label for="list_id">Select a List</label>
+    <select id='list_id' name='list_id' type='text'>
+      <% @lists.each() do |list| %>
+        <option value="<%= list.id()%>"> <%= list.name() %> </option>
+      <% end %>
+    </select>
+  </div>
+
+
+  <label for="description">Description of the task:</label>
+  <input id="description" name="description" type="text">
+
+  <button class="btn btn-success" type="submit">Add task</button>
+</form>
+
 <% @lists.each() do |list| %>
 <h3 class="center"><a href="list/<%= list.id() %>"><%= list.name() %></a></h3>
 <% end %>
