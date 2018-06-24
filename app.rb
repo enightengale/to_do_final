@@ -39,6 +39,13 @@ post("/lists") do
   end
 end
 
+delete("/lists/:id") do
+  @list = List.find(params.fetch("id").to_i())
+  @list.delete()
+  @lists = List.all()
+  redirect("/lists")
+end
+
 get("/list/:id") do
   @list = List.find(params.fetch("id").to_i())
   @lists = List.all()
