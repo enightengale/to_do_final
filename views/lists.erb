@@ -24,5 +24,10 @@
 </form>
 
 <% @lists.each() do |list| %>
-<h3 class="center"><a href="list/<%= list.id() %>"><%= list.name() %></a></h3>
+<h3 class="center"><a href="list/<%= list.id() %>"><%= list.name() %></a>
+  <form action="/lists/<%= list.id() %>" method="post">
+    <input name="_method" type="hidden" value="delete">
+    <button class="special" type="submit"><i class="fas fa-trash-alt"></i></button>
+  </form>
+</h3>
 <% end %>
