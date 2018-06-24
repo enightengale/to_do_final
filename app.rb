@@ -35,7 +35,7 @@ post("/lists") do
   if @task.save()
     erb(:task_success)
   else
-    erb(:errors)
+    erb(:task_error)
   end
 end
 
