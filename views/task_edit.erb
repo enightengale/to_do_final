@@ -1,0 +1,10 @@
+<div class="container bg1">
+  <div class="col-lg">
+    <h2><%= @task.description() %></h2>
+  </div>
+</div>
+
+<form action="/task/<%= @task.id() %>" method="post">
+  <input name="_method" type="hidden" value="delete">
+  <button class="special" type="submit"><i class="fas fa-trash-alt">Delete this Task</i></button>
+</form>
