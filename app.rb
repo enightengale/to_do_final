@@ -63,3 +63,15 @@ post("/list/:id") do
   new_task.save()
   erb(:list)
 end
+
+get("/task/:id") do
+  @task = Task.find(params.fetch("id").to_i())
+  erb(:task_edit)
+end
+
+delete("/task/:id") do
+  @task = Task.find(params.fetch("id").to_i())
+  @task.delete()
+  @tasks = Task.all()
+  redirect("/lists")
+end
