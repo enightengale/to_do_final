@@ -7,6 +7,6 @@
 
 <% @tasks.not_done.each() do |task|%>
   <% if task.list_id() == @list.id() %>
-  <h3 class="center"><a href="#"><%= task.description() %></a></h3>
+  <h3 class="center"><a href="/task/<%= task.id() %>"><%= task.description() %></a></h3>
   <% end %>
 <% end %>
