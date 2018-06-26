@@ -36,6 +36,7 @@ GEM
       mini_portile2 (~> 2.3.0)
     pg (1.0.0)
     public_suffix (3.0.2)
+    puma (3.11.4)
     rack (2.0.5)
     rack-protection (2.0.2)
       rack
@@ -83,6 +84,7 @@ PLATFORMS
 DEPENDENCIES
   capybara
   pg
+  puma
   rake
   rspec
   sinatra
