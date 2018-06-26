@@ -69,6 +69,14 @@ get("/task/:id") do
   erb(:task_edit)
 end
 
+patch("/task/:id") do
+  @task = Task.find(params.fetch("id").to_i())
+  description = params.fetch("description")
+  @task.update({:description => description})
+  @tasks = Task.all()
+  redirect("/lists")
+end
+
 delete("/task/:id") do
   @task = Task.find(params.fetch("id").to_i())
   @task.delete()
